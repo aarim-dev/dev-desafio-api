@@ -7,7 +7,7 @@ Obrigado pelo seu interesse em se juntar a nós. Este desafio vai nos permitir u
 * Preferencialmente, faça um fork desse projeto no Github.
 * Desenvolva conforme as intruções abaixo.
 * Envie seu código como um pull request para esse branch.
-* Se não estiver familiarizado com git ou tiver alguma dificuldade, nos envie seu código por e-mail.  [@aarim.com](mailto:@aarim.com)
+* Se não estiver familiarizado com git ou tiver alguma dificuldade, nos envie seu código por e-mail [desafio@aarim.com](mailto:desafio@aarim.com@aarim.com)
 
 Você pode utilizar a linguagem de programação que se sentir mais confortável, pórem projetos em *C#* terão um bônus na avaliação. Se optar por outra linguagem é importante incluir na descrição os requisitos e passos pra executar seu código.
 
