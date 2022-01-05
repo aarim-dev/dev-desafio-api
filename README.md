@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Desafio API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Obrigado pelo seu interesse em se juntar a nós. Este desafio vai nos permitir uma avaliação sobre seu nível de conhecimento e práticas de desenvolvimento. Estamos empolgados em saber do que você é capaz.
 
-## Available Scripts
+## Envio
 
-In the project directory, you can run:
+- Preferencialmente, faça um fork desse projeto no Github.
+- Desenvolva conforme as intruções abaixo.
+- Envie seu código como um pull request para esse branch.
+- Se não estiver familiarizado com git ou tiver alguma dificuldade, nos envie seu código por e-mail [desafio@aarim.com](mailto:desafio@aarim.com@aarim.com)
 
-### `npm start`
+Você pode utilizar a linguagem de programação que se sentir mais confortável, pórem projetos em _C#_ terão um bônus na avaliação. Se optar por outra linguagem é importante incluir na descrição os requisitos e passos pra executar seu código.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Projeto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este projeto não deve tomar muito de seu tempo, não há um prazo específico para a conclusão mas não é nosso interesse que você gaste muito tempo nisso e nem faça um trabalho correndo.
 
-### `npm test`
+Para esse projeto iremos utilizar uma API pública da série de animação Rick and Morty.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A demanda é consumir os dados de personagens e listar os que atendam a todos os seguintes critérios:
 
-### `npm run build`
+- Status = unknown
+- Species = alien
+- Apareceram em mais de 1 episódio
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Rick and Mordy API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Essa api pública que será usada é disponibilizada em duas versões (GraphQL e REST) e sua documentação pode ser encontrada aqui [https://rickandmortyapi.com/](https://rickandmortyapi.com/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para o desafio deve ser utilizada a versão REST e os dados coletados a partir do endpoint `/character`. Você pode se sentir a vontade para escrever o código mas é importante que leia a documentação para saber a forma mais eficaz de realizar a implementação.
 
-### `npm run eject`
+Segue um exemplo da resposta que terá:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+{
+  "info": {
+    "count": 826,
+    "pages": 42,
+    "next": "https://rickandmortyapi.com/api/character/?page=2",
+    "prev": null
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Male",
+      "origin": {
+        "name": "Earth",
+        "url": "https://rickandmortyapi.com/api/location/1"
+      },
+      "location": {
+        "name": "Earth",
+        "url": "https://rickandmortyapi.com/api/location/20"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "episode": [
+        "https://rickandmortyapi.com/api/episode/1",
+        "https://rickandmortyapi.com/api/episode/2",
+        // ...
+      ],
+      "url": "https://rickandmortyapi.com/api/character/1",
+      "created": "2017-11-04T18:48:46.250Z"
+    },
+    // ...
+  ]
+}
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Objetivo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Nós gostaríamos de ter uma ideia de como você trabalha (especificamente atuando com ambientes desconhecidos) e se você é capaz de atender a todos os requisitos de uma determinada tarefa. Seja utilizando seus conhecimentos atuais ou buscando novos.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Esperamos um código bem estruturado, lógico e simples. Não há necessidade de implementação de testes para esse desafio.
 
-## Learn More
+Nos envie através do `README` ou do e-mail um simples descritivo do seu processo nesse desafio, as dificuldades, descobertas, etc.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Travado?
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Se você travar ou tiver alguma dúvida não deixe de entrar em contato, via email ou uma Issue no repositório. Estamos em busca de pessoas que sejam independentes mas que não tenham medo de perguntar/questionar quando necessário. Isso não afetará a nossa avaliação.
 
-### Code Splitting
+## Obrigado!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Estamos animados pela oportunidade de trabalhar com você e saber do é capaz!
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> > > > > > > b4e9aa00e3776c74d53e50507ec64780a8ef7533
