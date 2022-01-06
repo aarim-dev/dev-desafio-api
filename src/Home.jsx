@@ -9,6 +9,7 @@ import Header from './components/Header';
 import './styles/global.css';
 import CharacterCard from './components/CharacterCard';
 import { CardsContainer } from './styles/Home';
+import FiltersContainer from './components/FiltersContainer';
 
 function Home() {
 	const [currentPageNumber, setCurrentPageNumber] = useState(1);
@@ -31,12 +32,13 @@ function Home() {
 			}
 		};
 
-		fetchAPI();
-	}, []);
+		fetchAPI(currentPageNumber);
+	}, [currentPageNumber]);
 
 	return (
 		<main>
 			<Header />
+			<FiltersContainer />
 			<CardsContainer>
 				{currentPageData.map((character) => (
 					<CharacterCard character={character} />

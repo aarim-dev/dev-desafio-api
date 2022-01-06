@@ -1,12 +1,11 @@
 /* ----------------------------------------------
 Used Font-styles
 ---------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Poppins&family=Roboto&family=Work+Sans&display=swap');
 
 /* ----------------------------------------------
 General Global Config
 ---------------------------------------------- */
-
 
 * {
 	margin: 0;
@@ -16,4 +15,6 @@ General Global Config
 
 main {
 	background-color: #24282f;
+	display: flex;
+	flex-flow: column;
 }
