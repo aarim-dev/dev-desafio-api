@@ -14,6 +14,7 @@ import FiltersContainer from './components/FiltersContainer';
 function Home() {
 	const [currentPageNumber, setCurrentPageNumber] = useState(1);
 	const [currentPageData, setCurrentPageData] = useState([]);
+
 	const [nextPageLink, setNextPageLink] = useState('');
 	const [previousPageLink, setPreviousPageLink] = useState('');
 
@@ -49,19 +50,23 @@ function Home() {
 	return (
 		<main>
 			<Header />
+
 			<FiltersContainer
 				filterOptions={filterOptions}
 				setFilterOptions={setFilterOptions}
 				setAarimSearch={setAarimSearch}
 				setCurrentPageNumber={setCurrentPageNumber}
 			/>
+
 			<CardsContainer>
 				{currentPageData
+					// this is one of the requirements of the challenge, more than 1 episode among other filters
 					.filter((item) => (aarimSearch ? item.episode.length > 1 : item))
 					.map((character) => (
 						<CharacterCard key={character.name + character.episode.length} character={character} />
 					))}
 			</CardsContainer>
+
 			<PaginationContainer>
 				<ul>
 					<li
