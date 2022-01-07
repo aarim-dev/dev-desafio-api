@@ -13,7 +13,12 @@ import {
 } from '../styles/FiltersContainer';
 import aarimIcon from '../assets/aarim-icon.jpg';
 
-function FiltersContainer({ filterOptions, setFilterOptions, setAarimSearch }) {
+function FiltersContainer({
+	filterOptions,
+	setFilterOptions,
+	setAarimSearch,
+	setCurrentPageNumber,
+}) {
 	const [statusFilter, setStatusFilter] = useState('');
 	const [speciesFilter, setSpeciesFilter] = useState('');
 	const [genderFilter, setGenderFilter] = useState(false);
@@ -28,6 +33,7 @@ function FiltersContainer({ filterOptions, setFilterOptions, setAarimSearch }) {
 					onClick={() => {
 						setFilterOptions({ status: 'unknown', species: 'alien' });
 						setAarimSearch(true);
+						setCurrentPageNumber(1);
 					}}
 				>
 					Busca Genial

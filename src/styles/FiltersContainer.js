@@ -10,13 +10,13 @@ export const FiltersContainerStyle = styled.div`
 
 	.aarim-search-btn-container {
 		align-items: center;
-		display: flex;
 		background-color: #edc516;
+		box-shadow: #a68d1f 1px 1px 0, #a68d1f 2px 2px 0, #a68d1f 3px 3px 0, #a68d1f 4px 4px 0;
+		display: flex;
 		margin: 1rem auto;
 		padding: 2px 10px 0 0;
 		transition: 200ms;
 		width: max-content;
-		box-shadow: #a68d1f 1px 1px 0, #a68d1f 2px 2px 0, #a68d1f 3px 3px 0, #a68d1f 4px 4px 0;
 
 		> img {
 			max-width: 58px;
@@ -50,7 +50,6 @@ export const FilterCategory = styled.div`
 	margin: 0 auto;
 
 	.filter-title {
-		/* text-align: center; */
 		font-family: 'Work Sans', 'sans-serif';
 		margin: 12px 0;
 	}
@@ -86,14 +85,14 @@ export const FilterCategory = styled.div`
 
 export const FilterItem = styled.li`
 	align-items: center;
+	background-color: ${(props) => props.activeFilter};
+	border: ${(props) => props.activeFilter};
 	display: flex;
 	gap: 3px;
 	margin: 5px 0;
 	padding: 4px;
 	transition: 100ms;
 	width: max-content;
-	border: ${(props) => props.activeFilter};
-	background-color: ${(props) => props.activeFilter};
 `;
 
 export const AliveIcon = styled.span`

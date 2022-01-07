@@ -8,12 +8,15 @@ import Header from './components/Header';
 // styles
 import './styles/global.css';
 import CharacterCard from './components/CharacterCard';
-import { CardsContainer } from './styles/Home';
+import { CardsContainer, PaginationContainer } from './styles/Home';
 import FiltersContainer from './components/FiltersContainer';
 
 function Home() {
 	const [currentPageNumber, setCurrentPageNumber] = useState(1);
 	const [currentPageData, setCurrentPageData] = useState([]);
+	const [nextPageLink, setNextPageLink] = useState('');
+	const [previousPageLink, setPreviousPageLink] = useState('');
+
 	const [filterOptions, setFilterOptions] = useState({});
 
 	const [aarimSearch, setAarimSearch] = useState(false);
@@ -29,8 +32,10 @@ function Home() {
 					},
 				});
 
-				const data = await fetchData.data.results;
-				setCurrentPageData(data);
+				const data = await fetchData.data;
+				setPreviousPageLink(data.info.prev);
+				setNextPageLink(data.info.next);
+				setCurrentPageData(data.results);
 			} catch (err) {
 				console.log(err);
 			}
@@ -39,6 +44,8 @@ function Home() {
 		fetchAPI(currentPageNumber);
 	}, [currentPageNumber, filterOptions]);
 
+	console.log(currentPageNumber);
+
 	return (
 		<main>
 			<Header />
@@ -46,6 +53,7 @@ function Home() {
 				filterOptions={filterOptions}
 				setFilterOptions={setFilterOptions}
 				setAarimSearch={setAarimSearch}
+				setCurrentPageNumber={setCurrentPageNumber}
 			/>
 			<CardsContainer>
 				{currentPageData
@@ -54,6 +62,31 @@ function Home() {
 						<CharacterCard key={character.name + character.episode.length} character={character} />
 					))}
 			</CardsContainer>
+			<PaginationContainer>
+				<ul>
+					<li
+						onClick={() => {
+							if (previousPageLink) {
+								setCurrentPageNumber(currentPageNumber - 1);
+							}
+							return;
+						}}
+					>
+						Previous
+					</li>
+					<li>{currentPageNumber}</li>
+					<li
+						onClick={() => {
+							if (nextPageLink) {
+								setCurrentPageNumber(currentPageNumber + 1);
+							}
+							return;
+						}}
+					>
+						Next
+					</li>
+				</ul>
+			</PaginationContainer>
 		</main>
 	);
 }

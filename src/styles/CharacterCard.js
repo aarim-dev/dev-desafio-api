@@ -18,7 +18,7 @@ export const CharacterCardStyle = styled.div`
 		font-size: 21px;
 		font-weight: 600;
 		border-radius: 0 0 8px 8px;
+		padding: 0 0 5px 10px;
 		width: 100%;
-        padding: 0 0 5px 10px;
 	}
 `;
