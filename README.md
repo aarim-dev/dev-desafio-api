@@ -1,88 +1,18 @@
-# Desafio API
+## Apresentação
 
-Obrigado pelo seu interesse em se juntar a nós. Este desafio vai nos permitir uma avaliação sobre seu nível de conhecimento e práticas de desenvolvimento. Estamos empolgados em saber do que você é capaz.
+Olá!
+Me chamo Caio, tenho 23 anos e sou estudante de Desenvolvimento Web pela Trybe a aproximadamente 1 ano.
 
-## Envio
+Com muita determinação e dedicação desenvolvi muitas habilidades, tanto hard-skills mas também muitas soft-skills. Aprendi muito, tanto a respeito das Stacks que possuo conhecimento atualmente (Javascript, Banco de Dados, React, Node etc...) como também aprender a estudar, aprender a aprender e ganhei muita autonomia.
 
-- Preferencialmente, faça um fork desse projeto no Github.
-- Desenvolva conforme as intruções abaixo.
-- Envie seu código como um pull request para esse branch.
-- Se não estiver familiarizado com git ou tiver alguma dificuldade, nos envie seu código por e-mail [desafio@aarim.com](mailto:desafio@aarim.com@aarim.com)
+## Sobre o projeto
 
-Você pode utilizar a linguagem de programação que se sentir mais confortável, pórem projetos em _C#_ terão um bônus na avaliação. Se optar por outra linguagem é importante incluir na descrição os requisitos e passos pra executar seu código.
+Esse projeto foi bem legal de se fazer. Consegui colocar alguns conhecimentos em prática e também tive que buscar uma abordagem nova para algumas coisas.
 
-## Projeto
+Gostei bastante de tê-lo feito e de me sentir desafiado. Um dos desafios desse projeto foi a parte de implementar o filtro 'composto' onde, quando você clica em uma opção do filtro, além de ele ir incrementando, ele também sinaliza para o usuário qual filtro foi selecionado. Demorei um pouco para montar e estruturar essa lógica, mas eu já previa que algo assim aconteceria, então para me dar mais autonomia eu usei a biblioteca Styled Components.
 
-Este projeto não deve tomar muito de seu tempo, não há um prazo específico para a conclusão mas não é nosso interesse que você gaste muito tempo nisso e nem faça um trabalho correndo.
+Não sou muito bom em criar 'designs' do zero, em minha cabeça, então essa parte foi bem desafiadora também. A minha habilidade é colocar as telas e layouts em código e a criatividade na estruturação dos algoritmos, não tanto a criação de layouts bonitos, mas gosto muito de tentar, experimentar e me desafiar e acredito que o resultado deste projeto ficou muito bacana.
 
-Para esse projeto iremos utilizar uma API pública da série de animação Rick and Morty.
+## Considerações
 
-A demanda é consumir os dados de personagens e listar os que atendam a todos os seguintes critérios:
-
-- Status = unknown
-- Species = alien
-- Apareceram em mais de 1 episódio
-
-### Rick and Mordy API
-
-Essa api pública que será usada é disponibilizada em duas versões (GraphQL e REST) e sua documentação pode ser encontrada aqui [https://rickandmortyapi.com/](https://rickandmortyapi.com/).
-
-Para o desafio deve ser utilizada a versão REST e os dados coletados a partir do endpoint `/character`. Você pode se sentir a vontade para escrever o código mas é importante que leia a documentação para saber a forma mais eficaz de realizar a implementação.
-
-Segue um exemplo da resposta que terá:
-
-```
-{
-  "info": {
-    "count": 826,
-    "pages": 42,
-    "next": "https://rickandmortyapi.com/api/character/?page=2",
-    "prev": null
-  },
-  "results": [
-    {
-      "id": 1,
-      "name": "Rick Sanchez",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
-      "origin": {
-        "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/1"
-      },
-      "location": {
-        "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/20"
-      },
-      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      "episode": [
-        "https://rickandmortyapi.com/api/episode/1",
-        "https://rickandmortyapi.com/api/episode/2",
-        // ...
-      ],
-      "url": "https://rickandmortyapi.com/api/character/1",
-      "created": "2017-11-04T18:48:46.250Z"
-    },
-    // ...
-  ]
-}
-```
-
-## Objetivo
-
-Nós gostaríamos de ter uma ideia de como você trabalha (especificamente atuando com ambientes desconhecidos) e se você é capaz de atender a todos os requisitos de uma determinada tarefa. Seja utilizando seus conhecimentos atuais ou buscando novos.
-
-Esperamos um código bem estruturado, lógico e simples. Não há necessidade de implementação de testes para esse desafio.
-
-Nos envie através do `README` ou do e-mail um simples descritivo do seu processo nesse desafio, as dificuldades, descobertas, etc.
-
-## Travado?
-
-Se você travar ou tiver alguma dúvida não deixe de entrar em contato, via email ou uma Issue no repositório. Estamos em busca de pessoas que sejam independentes mas que não tenham medo de perguntar/questionar quando necessário. Isso não afetará a nossa avaliação.
-
-## Obrigado!
-
-Estamos animados pela oportunidade de trabalhar com você e saber do é capaz!
-
-> > > > > > > b4e9aa00e3776c74d53e50507ec64780a8ef7533
+Quero agradecer novamente pela oportunidade de me dar esse desafio, seria de grande valor também, se puderem me passar um feedback geral sobre o código e a aplicação inteira em si. Garanto que ajudaria GRANDEMENTE na construção da minha carreira como Desenvolvedor!
