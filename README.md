@@ -13,6 +13,12 @@ Gostei bastante de tê-lo feito e de me sentir desafiado. Um dos desafios desse 
 
 Não sou muito bom em criar 'designs' do zero, em minha cabeça, então essa parte foi bem desafiadora também. A minha habilidade é colocar as telas e layouts em código e a criatividade na estruturação dos algoritmos, não tanto a criação de layouts bonitos, mas gosto muito de tentar, experimentar e me desafiar e acredito que o resultado deste projeto ficou muito bacana.
 
+## Utilização
+
+Esse projeto foi feito utilizando Javascript e React. Para utilizá-lo basta clonar o repositório, instalar as dependências com npm install e abrir o servidor digitando npm start. Ficará disponível localmente em https://localhost:3000.
+
+A aplicação também foi colocada no ar em um servidor remoto e está disponível acessando-a pelo link https://dev-desafio-api.vercel.app/
+
 ## Considerações
 
 Quero agradecer novamente pela oportunidade de me dar esse desafio, seria de grande valor também, se puderem me passar um feedback geral sobre o código e a aplicação inteira em si. Garanto que ajudaria GRANDEMENTE na construção da minha carreira como Desenvolvedor!
