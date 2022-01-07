@@ -14,6 +14,9 @@ import FiltersContainer from './components/FiltersContainer';
 function Home() {
 	const [currentPageNumber, setCurrentPageNumber] = useState(1);
 	const [currentPageData, setCurrentPageData] = useState([]);
+	const [filterOptions, setFilterOptions] = useState({});
+
+	const [aarimSearch, setAarimSearch] = useState(false);
 
 	useEffect(() => {
 		const fetchAPI = async (page) => {
@@ -22,6 +25,7 @@ function Home() {
 				const fetchData = await axios.get(BASE_URL, {
 					params: {
 						page,
+						...filterOptions,
 					},
 				});
 
@@ -33,16 +37,22 @@ function Home() {
 		};
 
 		fetchAPI(currentPageNumber);
-	}, [currentPageNumber]);
+	}, [currentPageNumber, filterOptions]);
 
 	return (
 		<main>
 			<Header />
-			<FiltersContainer />
+			<FiltersContainer
+				filterOptions={filterOptions}
+				setFilterOptions={setFilterOptions}
+				setAarimSearch={setAarimSearch}
+			/>
 			<CardsContainer>
-				{currentPageData.map((character) => (
-					<CharacterCard character={character} />
-				))}
+				{currentPageData
+					.filter((item) => (aarimSearch ? item.episode.length > 1 : item))
+					.map((character) => (
+						<CharacterCard key={character.name + character.episode.length} character={character} />
+					))}
 			</CardsContainer>
 		</main>
 	);

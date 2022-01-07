@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const FiltersContainerStyle = styled.div`
 	align-self: center;
-	border: 1px #fff solid;
 	color: #fff;
 	display: flex;
 	flex-flow: column;
@@ -17,6 +16,7 @@ export const FiltersContainerStyle = styled.div`
 		padding: 2px 10px 0 0;
 		transition: 200ms;
 		width: max-content;
+		box-shadow: #a68d1f 1px 1px 0, #a68d1f 2px 2px 0, #a68d1f 3px 3px 0, #a68d1f 4px 4px 0;
 
 		> img {
 			max-width: 58px;
@@ -41,30 +41,59 @@ export const FiltersContainerStyle = styled.div`
 
 export const GeneralFiltersContainer = styled.div`
 	display: flex;
+	gap: 1rem;
 `;
 
 export const FilterCategory = styled.div`
 	display: flex;
 	flex-flow: column;
-	margin: 0 1rem;
+	margin: 0 auto;
 
 	.filter-title {
-		text-align: center;
+		/* text-align: center; */
+		font-family: 'Work Sans', 'sans-serif';
+		margin: 12px 0;
 	}
 
 	.filter-content {
 		display: flex;
 		flex-flow: column;
+		font-family: 'Poppins', 'sans-serif';
 		height: 100%;
 		justify-content: space-between;
 		list-style-type: none;
+		margin: 0 auto;
+		width: 95px;
 
 		> li {
 			align-items: center;
 			display: flex;
 			gap: 3px;
+			margin: 5px 0;
+			padding: 4px;
+			transition: 100ms;
+			width: max-content;
+		}
+
+		> li:hover {
+			cursor: pointer;
+			transform: scale(1.01);
+			text-decoration: underline;
+			background-color: #2b2e33;
 		}
 	}
+`;
+
+export const FilterItem = styled.li`
+	align-items: center;
+	display: flex;
+	gap: 3px;
+	margin: 5px 0;
+	padding: 4px;
+	transition: 100ms;
+	width: max-content;
+	border: ${(props) => props.activeFilter};
+	background-color: ${(props) => props.activeFilter};
 `;
 
 export const AliveIcon = styled.span`
