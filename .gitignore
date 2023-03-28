@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/aarim.API/.vs/aarim.API
+/aarim.API/aarim.API/bin/Debug/net5.0
+/aarim.API/aarim.API/obj
+/aarim.API/.vs/ProjectEvaluation
