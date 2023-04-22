@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.WebUtilities;
 using Newtonsoft.Json;
-using RickAndMorty.CrossCutting;
+using RickAndMorty.CrossCutting.Settings;
 using RickAndMortyApi.Wrapper.Interfaces;
 using RickAndMortyApi.Wrapper.Models;
 using System.Collections.Generic;

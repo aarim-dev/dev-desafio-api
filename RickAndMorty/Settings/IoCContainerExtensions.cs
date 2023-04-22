@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using RickAndMorty.CrossCutting;
+using RickAndMorty.CrossCutting.Settings;
 using RickAndMortyApi.Wrapper;
 using RickAndMortyApi.Wrapper.Interfaces;
 using System;

@@ -1,6 +1,6 @@
-﻿using RickAndMorty.CrossCutting.Sections;
+﻿using RickAndMorty.CrossCutting.Settings.Sections;
 
-namespace RickAndMorty.CrossCutting
+namespace RickAndMorty.CrossCutting.Settings
 {
     public class AppSettings
     {

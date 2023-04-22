@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RickAndMorty.CrossCutting;
+using RickAndMorty.CrossCutting.Settings;
 using RickAndMorty.Settings;
 
 namespace RickAndMorty

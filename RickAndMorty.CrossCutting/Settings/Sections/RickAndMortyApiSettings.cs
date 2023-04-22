@@ -1,4 +1,4 @@
-﻿namespace RickAndMorty.CrossCutting.Sections
+﻿namespace RickAndMorty.CrossCutting.Settings.Sections
 {
     public class RickAndMortyApiSettings
     {
