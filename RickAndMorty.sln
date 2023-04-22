@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RickAndMorty", "RickAndMorty\RickAndMorty.csproj", "{D525F72C-9D56-4F16-B081-EF6284E5D999}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E485B129-6C6C-4979-9A81-E779C10BFC8E}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.Desafio.md = README.Desafio.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RickAndMortyApi.Wrapper", "RickAndMortyApi.Wrapper\RickAndMortyApi.Wrapper.csproj", "{6E60D8A9-1142-45AB-B856-6612860AA6E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RickAndMorty.CrossCutting", "RickAndMorty.CrossCutting\RickAndMorty.CrossCutting.csproj", "{83321945-5949-4423-923D-17B658F1FC39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D525F72C-9D56-4F16-B081-EF6284E5D999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D525F72C-9D56-4F16-B081-EF6284E5D999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D525F72C-9D56-4F16-B081-EF6284E5D999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D525F72C-9D56-4F16-B081-EF6284E5D999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E60D8A9-1142-45AB-B856-6612860AA6E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E60D8A9-1142-45AB-B856-6612860AA6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E60D8A9-1142-45AB-B856-6612860AA6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E60D8A9-1142-45AB-B856-6612860AA6E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83321945-5949-4423-923D-17B658F1FC39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83321945-5949-4423-923D-17B658F1FC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83321945-5949-4423-923D-17B658F1FC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83321945-5949-4423-923D-17B658F1FC39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {210B0F73-90C7-41BF-A959-3936644E9619}
+	EndGlobalSection
+EndGlobal
