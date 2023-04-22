@@ -7,7 +7,7 @@ namespace RickAndMortyApi.Wrapper.Interfaces
     public interface IRickAndMortyCharacters
     {
         /// <summary>
-        /// Lista os personagens por status e species e quantidade mínima de episódios
+        /// Lista os personagens por status, species e quantidade mínima de episódios
         /// </summary>
         /// <param name="status">Valor do filtro do status</param>
         /// <param name="species">Valor do filtro do species</param>

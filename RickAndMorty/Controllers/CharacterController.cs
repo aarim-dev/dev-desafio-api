@@ -30,7 +30,7 @@ namespace RickAndMorty.Controllers
         }
 
         [HttpGet("filtered")]
-        [SwaggerOperation("Personagens filtrados", Description = "Lista os personagens por status e species e quantidade mínima de episódios.")]
+        [SwaggerOperation("Personagens filtrados", Description = "Lista os personagens por status, species e quantidade mínima de episódios.")]
         [SwaggerResponse(StatusCodes.Status200OK, "Requisição executada com sucesso.", typeof(IList<RickAndMortyCharacter>))]
         public async Task<IActionResult> ListByStatusAndSpeciesAndMinimumEpisodesAsync(string status, string species, int minimumEpisodes)
         {

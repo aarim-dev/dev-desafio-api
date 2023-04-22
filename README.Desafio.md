@@ -1,87 +1,142 @@
-# Desafio API
+# Rick And Morty
 
-Obrigado pelo seu interesse em se juntar a nós. Este desafio vai nos permitir uma avaliação sobre seu nível de conhecimento e práticas de desenvolvimento. Estamos empolgados em saber do que você é capaz.
+O objetivo desse projeto é o consumo dos dados de personagens da API pública da série de animação Rick and Morty.
 
-## Envio
+## Pré-requisitos
 
-* Preferencialmente, faça um fork desse projeto no Github.
-* Desenvolva conforme as intruções abaixo.
-* Envie seu código como um pull request para esse branch.
-* Se não estiver familiarizado com git ou tiver alguma dificuldade, nos envie seu código por e-mail [desafio@aarim.com](mailto:desafio@aarim.com@aarim.com)
+Para rodar essa aplicação em um ambiente local, você deve:
 
-Você pode utilizar a linguagem de programação que se sentir mais confortável, pórem projetos em *C#* terão um bônus na avaliação. Se optar por outra linguagem é importante incluir na descrição os requisitos e passos pra executar seu código.
+* Baixar e instalar o .NET 5 SDK
+* Baixar a sua IDE de preferência
 
-## Projeto
+## API pública Rick And Morty
 
-Este projeto não deve tomar muito de seu tempo, não há um prazo específico para a conclusão mas não é nosso interesse que você gaste muito tempo nisso e nem faça um trabalho correndo.
+* [Documentação REST](https://rickandmortyapi.com/documentation/#rest)
+* [Documentação de como filtrar os personagens](https://rickandmortyapi.com/documentation/#filter-characters)
+* Objetos:
+  * [Info e paginação](https://rickandmortyapi.com/documentation/#info-and-pagination)
+  * [Personagens](https://rickandmortyapi.com/documentation/#character-schema)
 
-Para esse projeto iremos utilizar uma API pública da série de animação Rick and Morty. 
+## Estrutura
 
-A demanda é consumir os dados de personagens e listar os que atendam a todos os seguintes critérios:
+Considerando uma estrutura simples de projeto, foram definidas as seguintes camadas:
+
+* **RickAndMorty**: Aplicação Web API, responsável por disponibilizar os recursos via protocolo HTTP. 
+* **RickAndMortyApi.Wrapper**: Encapsulador da API pública Rick and Morty com as definições dos schemas e requests na API.
+* **RickAndMorty.CrossCutting**: Camada transversal
+  * A classe `AppSettings` representa as configurações definidas no arquivo de configuração `appsettings{env}.json` do projeto `RickAndMorty`, a escolha de estar nessa camada, é que ela pode ser injetada em qualquer nível, isso facilita o uso dos parâmetros em qualquer camada.
+
+## Regras
+
+* Devido o resultado da API pública Rick and Morty ser paginado com um limite de 20 registros por página, foi feito uma recursividade para obter e agrupar o resultado de todas as páginas.
+
+## Resultado do desafio
+
+Considerando os filtros abaixo:
 * Status = unknown
 * Species = alien
 * Apareceram em mais de 1 episódio
 
-### Rick and Mordy API
+O resultado são 4 registros:
 
-Essa api pública que será usada é disponibilizada em duas versões (GraphQL e REST) e sua documentação pode ser encontrada aqui [https://rickandmortyapi.com/](https://rickandmortyapi.com/).
-
-Para o desafio deve ser utilizada a versão REST e os dados coletados a partir do endpoint `/character`. Você pode se sentir a vontade para escrever o código mas é importante que leia a documentação para saber a forma mais eficaz de realizar a implementação.
-
-
-Segue um exemplo da resposta que terá:
-
-```
-{
-  "info": {
-    "count": 826,
-    "pages": 42,
-    "next": "https://rickandmortyapi.com/api/character/?page=2",
-    "prev": null
-  },
-  "results": [
-    {
-      "id": 1,
-      "name": "Rick Sanchez",
-      "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
-      "origin": {
-        "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/1"
-      },
-      "location": {
-        "name": "Earth",
-        "url": "https://rickandmortyapi.com/api/location/20"
-      },
-      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-      "episode": [
-        "https://rickandmortyapi.com/api/episode/1",
-        "https://rickandmortyapi.com/api/episode/2",
-        // ...
-      ],
-      "url": "https://rickandmortyapi.com/api/character/1",
-      "created": "2017-11-04T18:48:46.250Z"
+~~~json
+[
+  {
+    "id": 23,
+    "name": "Arcade Alien",
+    "status": "unknown",
+    "species": "Alien",
+    "type": "",
+    "gender": "Male",
+    "origin": {
+      "name": [],
+      "url": []
     },
-    // ...
-  ]
-}
-```
-
-
-## Objetivo
-
-Nós gostaríamos de ter uma ideia de como você trabalha (especificamente atuando com ambientes desconhecidos) e se você é capaz de atender a todos os requisitos de uma determinada tarefa. Seja utilizando seus conhecimentos atuais ou buscando novos.
-
-Esperamos um código bem estruturado, lógico e simples. Não há necessidade de implementação de testes para esse desafio.
-
-Nos envie através do `README` ou do e-mail um simples descritivo do seu processo nesse desafio, as dificuldades, descobertas, etc.
-
-## Travado?
-
-Se você travar ou tiver alguma dúvida não deixe de entrar em contato, via email ou uma Issue no repositório. Estamos em busca de pessoas que sejam independentes mas que não tenham medo de perguntar/questionar quando necessário. Isso não afetará a nossa avaliação.
-
-## Obrigado!
-
-Estamos animados pela oportunidade de trabalhar com você e saber do é capaz!
+    "location": {
+      "name": [],
+      "url": []
+    },
+    "image": "https://rickandmortyapi.com/api/character/avatar/23.jpeg",
+    "episode": [
+      "https://rickandmortyapi.com/api/episode/13",
+      "https://rickandmortyapi.com/api/episode/19",
+      "https://rickandmortyapi.com/api/episode/21",
+      "https://rickandmortyapi.com/api/episode/25",
+      "https://rickandmortyapi.com/api/episode/26"
+    ],
+    "url": "https://rickandmortyapi.com/api/character/23",
+    "created": "2017-11-05T08:43:05.095Z"
+  },
+  {
+    "id": 282,
+    "name": "Revolio Clockberg Jr.",
+    "status": "unknown",
+    "species": "Alien",
+    "type": "Gear-Person",
+    "gender": "Male",
+    "origin": {
+      "name": [],
+      "url": []
+    },
+    "location": {
+      "name": [],
+      "url": []
+    },
+    "image": "https://rickandmortyapi.com/api/character/avatar/282.jpeg",
+    "episode": [
+      "https://rickandmortyapi.com/api/episode/11",
+      "https://rickandmortyapi.com/api/episode/13",
+      "https://rickandmortyapi.com/api/episode/25"
+    ],
+    "url": "https://rickandmortyapi.com/api/character/282",
+    "created": "2017-12-31T19:21:17.351Z"
+  },
+  {
+    "id": 308,
+    "name": "Scropon",
+    "status": "unknown",
+    "species": "Alien",
+    "type": "Lobster-Alien",
+    "gender": "Male",
+    "origin": {
+      "name": [],
+      "url": []
+    },
+    "location": {
+      "name": [],
+      "url": []
+    },
+    "image": "https://rickandmortyapi.com/api/character/avatar/308.jpeg",
+    "episode": [
+      "https://rickandmortyapi.com/api/episode/11",
+      "https://rickandmortyapi.com/api/episode/21"
+    ],
+    "url": "https://rickandmortyapi.com/api/character/308",
+    "created": "2018-01-05T14:22:47.706Z"
+  },
+  {
+    "id": 331,
+    "name": "Squanchy",
+    "status": "unknown",
+    "species": "Alien",
+    "type": "Cat-Person",
+    "gender": "Male",
+    "origin": {
+      "name": [],
+      "url": []
+    },
+    "location": {
+      "name": [],
+      "url": []
+    },
+    "image": "https://rickandmortyapi.com/api/character/avatar/331.jpeg",
+    "episode": [
+      "https://rickandmortyapi.com/api/episode/11",
+      "https://rickandmortyapi.com/api/episode/16",
+      "https://rickandmortyapi.com/api/episode/21"
+    ],
+    "url": "https://rickandmortyapi.com/api/character/331",
+    "created": "2018-01-10T16:29:25.344Z"
+  }
+]
+~~~
