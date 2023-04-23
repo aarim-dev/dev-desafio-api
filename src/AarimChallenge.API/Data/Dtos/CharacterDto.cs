@@ -1,8 +1,8 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace AarimChallenge.API.Models
+namespace AarimChallenge.API.Data.Dtos
 {
-    public class Character
+    public class CharacterDto
     {
         [JsonPropertyName("name")]
         public string? Name { get; set; }

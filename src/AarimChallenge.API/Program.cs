@@ -1,4 +1,6 @@
 using AarimChallenge.API.Extensions;
+using AarimChallenge.API.Services.Concretes;
+using AarimChallenge.API.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddRickAndMortyHttpClient(builder.Configuration["RickAndMortyAPI:BaseAddress"]);
+builder.Services.AddRickAndMortyHttpClient(builder.Configuration);
+
+builder.Services.AddScoped<ICharactersService, CharactersService>();
 
 var app = builder.Build();
 
