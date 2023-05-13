@@ -7,7 +7,7 @@ Pensei que mesmo sendo um desafio simples, o ideal é sempre construir algo pens
 
 Tentei individualizar ao máximo a responsabilidade de cada classe, por isso o código está bem separado, seguindo o Single-responsibility Principle. 
 
-Agora passando de decisões arquiteturais para algo mais lógico,  criei uma interface Gateway da API do Rick and Morty que define todos os métodos que serão utilizados (nesse caso, apenas o GET), que aceita parâmetros de espécie e status, caso um dia seja necessário implementar algum filtro diferente, e também crieie enums com cada status disponível de acordo com a documentação.
+Agora passando de decisões arquiteturais para algo mais lógico,  criei uma interface Gateway da API do Rick and Morty que define todos os métodos que serão utilizados (nesse caso, apenas o GET), que aceita parâmetros de espécie e status, caso um dia seja necessário implementar algum filtro diferente, e também criei enums com cada status disponível de acordo com a documentação.
 
 A implementação desses métodos é feita sem regras de negócio chamando o cLient, que é a classe que de fato faz a requisição para a API, e por fim essa Classe de Implementação é utilizada pelo serviço da minha API, que é onde aplico a regra de negócio (A questão de aparecer em mais de um EP).
  
