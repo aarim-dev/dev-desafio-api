@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioRickAndMorty.API", "src\DesafioRickAndMorty.API\DesafioRickAndMorty.API.csproj", "{69179165-B923-4EFF-BD70-0BD113FA7145}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{34EDC848-16FB-41BD-B5CA-23036670FE5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{64B91152-2271-4A5F-AAAB-3C6C96CB5F66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IOC", "IOC", "{DEEA41C9-F66C-4EC1-81D1-FC978009F5AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioRickAndMorty.Application", "src\DesafioRickAndMorty.Application\DesafioRickAndMorty.Application.csproj", "{CD606B21-E4CE-4B1C-B0B1-5E1D3A4AA567}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioRickAndMorty.IOC", "src\DesafioRickAndMorty.IOC\DesafioRickAndMorty.IOC.csproj", "{E45ACE12-8D23-4AB2-B3FC-A4A8F045382D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69179165-B923-4EFF-BD70-0BD113FA7145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69179165-B923-4EFF-BD70-0BD113FA7145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69179165-B923-4EFF-BD70-0BD113FA7145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69179165-B923-4EFF-BD70-0BD113FA7145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD606B21-E4CE-4B1C-B0B1-5E1D3A4AA567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD606B21-E4CE-4B1C-B0B1-5E1D3A4AA567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD606B21-E4CE-4B1C-B0B1-5E1D3A4AA567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD606B21-E4CE-4B1C-B0B1-5E1D3A4AA567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E45ACE12-8D23-4AB2-B3FC-A4A8F045382D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E45ACE12-8D23-4AB2-B3FC-A4A8F045382D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E45ACE12-8D23-4AB2-B3FC-A4A8F045382D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E45ACE12-8D23-4AB2-B3FC-A4A8F045382D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{69179165-B923-4EFF-BD70-0BD113FA7145} = {34EDC848-16FB-41BD-B5CA-23036670FE5F}
+		{CD606B21-E4CE-4B1C-B0B1-5E1D3A4AA567} = {64B91152-2271-4A5F-AAAB-3C6C96CB5F66}
+		{E45ACE12-8D23-4AB2-B3FC-A4A8F045382D} = {DEEA41C9-F66C-4EC1-81D1-FC978009F5AB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AE8BC3B-6C6C-4BEB-A52B-3C101B2E0EFF}
+	EndGlobalSection
+EndGlobal
