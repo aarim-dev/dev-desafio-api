@@ -1,0 +1,32 @@
+﻿@using Aarim.Desafio.RickMorty.Models;
+@model IndexModel
+@{
+    ViewData["Title"] = "Rick & Morty";
+}
+
+<div class="container">
+    <div class="row row-cols-3 row-cols-md-4 g-4">
+        @foreach (Character character in Model.Characters)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img src="@character.Image" class="card-img-top" alt="@character.Type" title="@character.Name">
+                    <div class="card-body">
+                        <span class="badge rounded-pill bg-secondary">#@character.Id</span>
+                        <h5 class="card-title">@character.Name</h5>
+                        <p class="card-text scroll">
+                            @if (character.Episode is not null)
+                            {
+                                @Html.Raw(string.Join($"<br/>", character.Episode.Select(e => $"<a href='{e}'>Episodio {e.Split("/").Last()}</a>").ToList()));
+                            }
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Origem: @character.Origin?.Name</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
