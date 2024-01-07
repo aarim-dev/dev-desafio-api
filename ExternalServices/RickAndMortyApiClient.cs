@@ -27,7 +27,7 @@ namespace dev_desafio_api.ExternalServices
             while(true)
             {
                 var requestResult = await httpClient.GetAsync($"character?page={page}");
-                var content = requestResult.Content.ReadAsStringAsync().Result;
+                var content = await requestResult.Content.ReadAsStringAsync();
 
                 Console.Write(result);
 
