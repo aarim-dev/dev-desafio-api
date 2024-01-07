@@ -7,6 +7,7 @@ RickAndMortyDao _rickAndMortyDao = new();
 builder.Services.
 AddSingleton(_rickAndMortyDao).
 AddSingleton<RickAndMortyApiClient>().
+AddEndpointsApiExplorer().
 AddSwaggerGen().
 AddHttpClient("RickAndMortyPublicApi", config =>
 {
@@ -20,5 +21,7 @@ app.UseSwaggerUI();
 var rickAndMortyApiClient = app.Services.GetService<RickAndMortyApiClient>();
 
 app.MapGet("/", () => "Hello World!");
+
+app.MapGet("/rickyAndMorty/characters", () => rickAndMortyApiClient!.GetAllCharactersAvailable());
 
 app.Run();
