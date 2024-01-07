@@ -1,4 +1,5 @@
 using System.Text.Json;
+using dev_desafio_api.Dtos.ExternalServices;
 using dev_desafio_api.Models;
 
 namespace dev_desafio_api.ExternalServices
@@ -32,8 +33,8 @@ namespace dev_desafio_api.ExternalServices
 
                 try
                 {
-                    List<Character> charactersToAdd = JsonSerializer.Deserialize<List<Character>>(content, _jsonSerializerOptions)!;
-                    result.AddRange(charactersToAdd);
+                    CharactersResponse charactersToAdd = JsonSerializer.Deserialize<CharactersResponse>(content, _jsonSerializerOptions)!;
+                    result.AddRange(charactersToAdd.Result);
                 }
                 catch(Exception ex)
                 {
@@ -50,10 +51,10 @@ namespace dev_desafio_api.ExternalServices
         public async Task<List<Character>> GetAllCharactersAvailableWithChallengeFilter()
         {
             List<Character> result = await GetAllCharactersAvailable();
-            return result
-            .Where(character =>
-             character.Status == "Unknown" && character.Species == "Alien" && character.Episodes.Count > 0)
-            .ToList();
+            return result.
+                Where(character =>
+                    character.Status == "Unknown" && character.Species == "Alien" && character.Episodes.Count > 0).
+                ToList();
         }
     }
 }
