@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj": {}
+  },
+  "projects": {
+    "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj",
+        "projectName": "dev-desafio-api",
+        "projectPath": "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj",
+        "packagesPath": "C:\\Users\\NoggetGump\\.nuget\\packages\\",
+        "outputPath": "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\NoggetGump\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.23.1, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[14.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
