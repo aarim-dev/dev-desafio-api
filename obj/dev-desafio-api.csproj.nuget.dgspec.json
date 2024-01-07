@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj": {}
+    "D:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj": {}
   },
   "projects": {
-    "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj": {
+    "D:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj",
+        "projectUniqueName": "D:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj",
         "projectName": "dev-desafio-api",
-        "projectPath": "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj",
+        "projectPath": "D:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj",
         "packagesPath": "C:\\Users\\NoggetGump\\.nuget\\packages\\",
-        "outputPath": "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\obj\\",
+        "outputPath": "D:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NoggetGump\\AppData\\Roaming\\NuGet\\NuGet.Config"

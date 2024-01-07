@@ -7,6 +7,7 @@ RickAndMortyDao _rickAndMortyDao = new();
 builder.Services.
 AddSingleton(_rickAndMortyDao).
 AddSingleton<RickAndMortyApiClient>().
+AddSwaggerGen().
 AddHttpClient("RickAndMortyPublicApi", config =>
 {
     config.BaseAddress = new("https://rickandmortyapi.com/api/");

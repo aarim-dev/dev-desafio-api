@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "do6N+1B6sbmLEFo7Btmf5IzrMImpzcGXZFtHZBG6WDU2GwazyKMrsO/9DYW1ZfJWc4GDMIjmVFIN0DEZk/lo2Q==",
+  "dgSpecHash": "eDSdPW+ypY3dzRzrvuHGMFXOO13Yu6DpuhukLxFwV+prVUgttdoP0K2veNzXUgfQFsXZSIHeoBp5yzu4l9ua9A==",
   "success": true,
-  "projectFilePath": "d:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj",
+  "projectFilePath": "D:\\Source\\dotnet_projects\\AarimChallenge\\dev-desafio-api\\dev-desafio-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NoggetGump\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\NoggetGump\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
