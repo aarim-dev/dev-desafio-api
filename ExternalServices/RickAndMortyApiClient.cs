@@ -49,7 +49,7 @@ namespace dev_desafio_api.ExternalServices
             List<CharacterRespose> result = await GetAllCharactersAvailable();
             return result.
                 Where(character =>
-                    character.Status == "Unknown" && character.Species == "Alien" && character.Episode.Count > 0).
+                    character.Status == "unknown" && character.Species == "Alien" && character.Episode.Count > 0).
                 ToList();
         }
     }
