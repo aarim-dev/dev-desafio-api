@@ -44,12 +44,27 @@ namespace dev_desafio_api.ExternalServices
             return result;
         }
 
+        private async Task<List<CharacterRespose>> GetAllCharactersWithFilter(string status, string species)
+        {
+            using var httpClient = _clientFactory.CreateClient("RickAndMortyPublicApi");
+            
+            var requestResult = await httpClient.GetAsync($"character?status={status}&species={species}");
+            CharactersResponse response = new();
+            if(requestResult.IsSuccessStatusCode)
+            {
+                var content = await requestResult.Content.ReadAsStringAsync();
+                response = JsonSerializer.Deserialize<CharactersResponse>(content, _jsonSerializerOptions)!;
+            }
+
+            return response.Results;
+        }
+
         public async Task<List<CharacterRespose>> GetAllCharactersAvailableWithChallengeFilter()
         {
-            List<CharacterRespose> result = await GetAllCharactersAvailable();
+            List<CharacterRespose> result = await GetAllCharactersWithFilter("Unknown", "Alien");
             return result.
                 Where(character =>
-                    character.Status == "unknown" && character.Species == "Alien" && character.Episode.Count > 0).
+                    character.Episode.Count > 1).
                 ToList();
         }
     }
