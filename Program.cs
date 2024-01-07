@@ -24,4 +24,6 @@ app.MapGet("/", () => "Hello World!");
 
 app.MapGet("/rickyAndMorty/characters", () => rickAndMortyApiClient!.GetAllCharactersAvailable());
 
+app.MapGet("/rickyAndMorty/characters", () => rickAndMortyApiClient!.GetAllCharactersAvailableWithChallengeFilter());
+
 app.Run();

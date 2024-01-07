@@ -4,6 +4,6 @@ namespace dev_desafio_api.Dtos.ExternalServices
     {
         public InformationResponse Info { get; set; } = null!;
 
-        public List<CharacterRespose> Results = null!;
+        public List<CharacterRespose> Results { get; set; } = null!;
     }
 }

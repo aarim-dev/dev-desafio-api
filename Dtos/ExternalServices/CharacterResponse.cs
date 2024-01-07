@@ -19,9 +19,9 @@ namespace dev_desafio_api.Dtos.ExternalServices
 
         public LocationResponse? Location { get; set; }
 
-        public List<string> Episodes { get; set; } = new();
-
         public string Image { get; set; } = string.Empty;
+
+        public List<string> Episode { get; set; } = new();
 
         public string Url { get; set; } = string.Empty;
 
