@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/dev-desafio-api/App/obj
+/dev-desafio-api/App/bin/Debug/net8.0
+/dev-desafio-api/.vs/dev-desafio-api
+/dev-desafio-api/Domain/bin/Debug/net8.0
+/dev-desafio-api/Domain/obj
+/dev-desafio-api/Service/bin/Debug/net8.0
+/dev-desafio-api/Service/obj
