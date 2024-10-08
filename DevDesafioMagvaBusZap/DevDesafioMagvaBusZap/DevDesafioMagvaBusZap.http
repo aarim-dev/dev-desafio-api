@@ -1,0 +1,6 @@
+@DevDesafioMagvaBusZap_HostAddress = http://localhost:5114
+
+GET {{DevDesafioMagvaBusZap_HostAddress}}/api/v1/RickAndMortyApi
+Accept: application/json
+
+###
